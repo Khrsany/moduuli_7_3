@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.AddCurrencyController"
+      spacing="10"
+      padding="20 20 20 20">
+
+    <Label text="Add New Currency" />
+
+    <TextField fx:id="codeField" promptText="Currency Code" />
+    <TextField fx:id="nameField" promptText="Currency Name" />
+    <TextField fx:id="rateField" promptText="Exchange Rate" />
+
+    <Button text="Save" onAction="#onSaveCurrency"/>
+
+</VBox>

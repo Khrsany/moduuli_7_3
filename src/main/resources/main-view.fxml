@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController">
+
+    <center>
+        <TableView fx:id="currencyTable">
+            <columns>
+                <TableColumn text="Code" fx:id="codeColumn"/>
+                <TableColumn text="Name" fx:id="nameColumn"/>
+                <TableColumn text="Rate" fx:id="rateColumn"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <Button text="Add Currency" onAction="#onAddCurrency"/>
+    </bottom>
+
+</BorderPane>
