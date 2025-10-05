@@ -6,15 +6,12 @@ import jakarta.persistence.Persistence;
 
 public class MariaDbJpaConnection {
     private static EntityManagerFactory emf = null;
-    private static EntityManager em = null;
 
+    // Luo uusi EntityManager joka kerta kun tätä kutsutaan
     public static EntityManager getInstance() {
-        if (em == null) {
-            if (emf == null) {
-                emf = Persistence.createEntityManagerFactory("CurrencyUnit");
-            }
-            em = emf.createEntityManager();
+        if (emf == null) {
+            emf = Persistence.createEntityManagerFactory("CurrencyUnit");
         }
-        return em;
+        return emf.createEntityManager();
     }
 }
